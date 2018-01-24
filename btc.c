@@ -143,6 +143,9 @@ int		main(int argc, char **argv)
 	int 	num_out;
 
 	num_out = 2;
+	fora = 0;
+	real = 0;
+	f = 18;
 	n = give_memory(16,48,24,num_out);
 	fp = fopen("smallb.csv", "r");
 	printf("1 - read from file\n");
@@ -151,10 +154,7 @@ int		main(int argc, char **argv)
 		write_from_file(&n);
 	else
 		zero(&n);
-	f = 18;
 	tmp = 0;
-	fora = 0;
-	real = 0;
 	printf("1 - start study\n");
 	scanf("%d", &fora);
 	if(fora == 1)
@@ -219,19 +219,6 @@ int		main(int argc, char **argv)
 		tmp++;
 		f += 2;
 	}
-
-	printf("last og smallb.csv\n");
-	sdvig(&n, m, 2);
-	calculate(&n);
-	i = 0;
-	printf("[14]=%f   [15]=%f\n\n",n->input[14],  n->input[15]);
-	while(i < num_out)
-	{
-		printf("%f    \n", n->output[i] * 10000);
-		i++;
-	}
-	printf("\n");
-	fclose(fp);
 
 	fp = fopen("now.csv", "r");
 	f = 0;

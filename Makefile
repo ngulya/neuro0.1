@@ -10,7 +10,7 @@ OBJ = $(FILE:.o=.c)
 all: fclean comp 
 
 comp:
-	@$(CC) $(OBJ) -o $(NEURO)
+	@$(CC) $(OBJ) -lm -o $(NEURO)
 
 fclean:
 	@-/bin/rm -f $(NEURO)
